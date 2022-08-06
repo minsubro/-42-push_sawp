@@ -1,0 +1,7 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/minsukan/Desktop/42/push_swap'
+ 
+make: Leaving directory `/Users/minsukan/Desktop/42/push_swap'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
