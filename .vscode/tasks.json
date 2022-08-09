@@ -7,7 +7,7 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${file}",
+                "/Users/minsukan/Desktop/42/push_swap/*.c",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],
