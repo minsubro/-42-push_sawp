@@ -6,7 +6,7 @@
 /*   By: minsukan <minsukan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 13:08:23 by minsukan          #+#    #+#             */
-/*   Updated: 2022/08/09 18:39:46 by minsukan         ###   ########.fr       */
+/*   Updated: 2022/08/09 18:50:03 by minsukan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,16 @@ void move(t_stack_lst stack, int idx)
 	int	len;
 
 	len = stack.a_stack->size - 1;
-	while (a->)
+	while (len != 0)
+	{
+		if (stack.a_stack->head->n <= idx)
+		{
+			p(stack.b_stack, stack.a_stack, 'b');
+			idx++;
+		}
+		else if (stack.a_stack->head->n > i )
+	}
+	
 }
 
 int	two_case(t_stack *stack)
