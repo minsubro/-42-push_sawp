@@ -6,7 +6,7 @@
 /*   By: minsukan <minsukan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 13:08:23 by minsukan          #+#    #+#             */
-/*   Updated: 2022/08/09 18:50:03 by minsukan         ###   ########.fr       */
+/*   Updated: 2022/08/10 15:22:29 by minsukan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,23 +29,6 @@ t_stack	*create_stack(void)
 	new->size = 0;
 	new->tail = NULL;
 	return (new);
-}
-
-void move(t_stack_lst stack, int idx)
-{
-	int	len;
-
-	len = stack.a_stack->size - 1;
-	while (len != 0)
-	{
-		if (stack.a_stack->head->n <= idx)
-		{
-			p(stack.b_stack, stack.a_stack, 'b');
-			idx++;
-		}
-		else if (stack.a_stack->head->n > i )
-	}
-	
 }
 
 int	two_case(t_stack *stack)
@@ -110,11 +93,96 @@ int	exception_case(t_stack_lst stack)
 	return (0);
 }
 
+void serch_pivot(t_stack *stack, int *pivot1, int *pivot2)
+{
+	t_list	*temp;
+	int		i;		
+	int 	min;
+	int 	max;
+
+	min = INT_MAX;
+	max = 0;
+	i = 0;
+	temp = stack->head;
+	while (i < stack->size)
+	{
+		if (temp->n < min)
+			min = temp->n;
+		if (temp->n > max)
+			max = temp->n;
+		temp = temp->right;
+		i++;
+	}
+	*pivot1 = ((max - min) / 2 / 2);
+	*pivot2 = (((max - min) / 2) + *pivot1);
+}
+
+void a_to_b(t_stack_lst stack, int pivot1, int pivot2)
+{
+	int	i;
+
+	i = 0;
+	while (i < stack.a_stack->size)
+	{
+		if (stack.a_stack->head->n >= pivot2)
+			r(stack.a_stack, 'a');
+		if (stack.a_stack->head->n < pivot2)
+		{
+			p(stack.b_stack, stack.a_stack, 'b');
+			if (stack.b_stack->head->n >= pivot1)
+				r(stack.b_stack, 'b');
+		}
+		i++;
+	}
+}
+
+void b_to_a(t_stack_lst stack, int pivot1, int pivot2)
+{
+	int	i;
+
+	i = 0;
+	while (i < stack.b_stack->size)
+	{
+		if (stack.b_stack->head->n < pivot1)
+			r(stack.b_stack, 'b');
+		if (stack.b_stack->head->n >= pivot1)
+		{
+			p(stack.a_stack, stack.b_stack, 'a');
+			if (stack.a_stack->head->n < pivot2)
+				r(stack.a_stack, 'a');
+		}
+		i++;
+	}
+}
+
 void	push_swap(t_stack_lst stack)
 {
-	(void)stack;
-	return ;
+	int	pivot1;
+	int	pivot2;
 	
+	
+	serch_pivot(stack.a_stack, &pivot1, &pivot2);
+	a_to_b(stack, pivot1, pivot2);
+	serch_pivot(stack.b_stack, &pivot1, &pivot2);
+	b_to_a(stack, pivot1, pivot2);
+	
+	///
+	printf("\npivot1 : %d pivoe2 : %d", pivot1, pivot2);
+	printf("\na : ");
+	t_list *temp = stack.a_stack->head;
+	for(int i = 0; i<stack.a_stack->size; i++)
+	{
+		printf("%d ", temp->n);
+		temp = temp->right;
+	}
+	temp = stack.b_stack->head;
+	printf("\nb : ");
+	for(int i = 0; i<stack.b_stack->size; i++)
+	{
+		printf("%d ", temp->n);
+		temp = temp->right;
+	}
+	///
 }
 
 int	is_sort(t_stack *stack)
