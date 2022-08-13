@@ -6,7 +6,7 @@
 /*   By: minsukan <minsukan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 12:09:22 by minsukan          #+#    #+#             */
-/*   Updated: 2022/08/07 19:01:44 by minsukan         ###   ########.fr       */
+/*   Updated: 2022/08/14 00:05:09 by minsukan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,10 @@ void	r_area_setting(t_list ***arr, t_sort *var)
 	}
 }
 
-
 void	lst_swap(t_list **a, t_list **b)
 {
 	t_list	*temp;
-	
+
 	temp = *a;
 	*a = *b;
 	*b = temp;
@@ -64,7 +63,7 @@ void	quick_sort(t_list ***arr, t_sort *var)
 		else
 		{
 			if ((*(arr[var->now]))->n > var->rp)
-				r_area_setting(arr, var);	
+				r_area_setting(arr, var);
 		}
 		(var->now)++;
 	}

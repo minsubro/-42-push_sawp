@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   command.c                                          :+:      :+:    :+:   */
+/*   command2.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: minsukan <minsukan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/07 16:09:38 by minsukan          #+#    #+#             */
-/*   Updated: 2022/08/08 15:15:18 by minsukan         ###   ########.fr       */
+/*   Created: 2022/08/13 23:50:01 by minsukan          #+#    #+#             */
+/*   Updated: 2022/08/13 23:50:35 by minsukan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,18 @@ void	s(t_stack *stack, char a)
 	temp->n = temp->right->n;
 	temp->right->n = n_temp;
 	if (a == 'a' || a == 'b')
-		printf("s%c\n", a);
+	{
+		write(1, "s", 1);
+		write(1, &a, 1);
+		write(1, "\n", 1);
+	}
 }
 
-void	ss(t_stack_lst *stack_lst)
+void	ss(t_stack_lst stack_lst)
 {
-	s(stack_lst->a_stack, 0);
-	s(stack_lst->b_stack, 0);
-	printf("ss\n");
+	s(stack_lst.a_stack, 0);
+	s(stack_lst.b_stack, 0);
+	write(1, "ss\n", 3);
 }
 
 void	p(t_stack *dst_stack, t_stack *src_stack, char a)
@@ -39,9 +43,11 @@ void	p(t_stack *dst_stack, t_stack *src_stack, char a)
 	t_list	*src_temp;
 	t_list	*dst_temp;
 
-	printf("p%c\n", a);
 	if (src_stack->size == 0)
 		return ;
+	write(1, "p", 1);
+	write(1, &a, 1);
+	write(1, "\n", 1);
 	src_temp = src_stack->head;
 	dst_temp = dst_stack->head;
 	src_stack->head = src_temp->right;
@@ -53,38 +59,4 @@ void	p(t_stack *dst_stack, t_stack *src_stack, char a)
 	(dst_stack->size)++;
 	lst_link(dst_stack);
 	lst_link(src_stack);
-}
-
-void	r(t_stack *stack, char a)
-{
-	if (a == 'a' || a== 'b')
-		printf("r%c\n", a);
-	if (stack->size < 2)
-		return ;
-	stack->tail = stack->head;
-	stack->head = stack->head->right;
-}
-
-void	rr(t_stack_lst *stack)
-{
-	r(stack->a_stack, 0);
-	r(stack->b_stack, 0);
-	printf("rr\n");
-}
-
-void	rrab(t_stack *stack, char a)
-{
-	if (a == 'a' || a== 'b')
-		printf("rr%c\n", a);
-	if (stack->size < 2)
-		return ;
-	stack->head = stack->tail;
-	stack->tail = stack->tail->left;
-}
-
-void	rrr(t_stack_lst *stack)
-{
-	rrab(stack->a_stack, 0);
-	rrab(stack->b_stack, 0);
-	printf("rrr\n");
 }

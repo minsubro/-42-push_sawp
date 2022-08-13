@@ -6,7 +6,7 @@
 /*   By: minsukan <minsukan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 12:47:33 by minsukan          #+#    #+#             */
-/*   Updated: 2022/08/08 13:04:23 by minsukan         ###   ########.fr       */
+/*   Updated: 2022/08/13 23:59:30 by minsukan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,18 +46,25 @@ void	make_stack(int ac, char **av, t_stack *stack)
 {
 	int		i;
 	t_list	*new;
+	char	**str;
+	int		cnt;
 
 	i = ac - 1;
 	while (i)
 	{
-		new = create_new(ft_atoi(av[i], &(stack->head)));
-		if (!new)
-			lst_clear(stack);
-		new->right = stack->head;
-		if (stack->head)
-			stack->head->left = new;
-		stack->head = new;
-		(stack->size)++;
+		str = ft_split(av[i], ' ', &cnt);
+		while (cnt - 1 >= 0 && str[cnt - 1])
+		{
+			new = create_new(ft_atoi(str[cnt - 1], &(stack->head)));
+			if (!new)
+				lst_clear(stack);
+			new->right = stack->head;
+			if (stack->head)
+				stack->head->left = new;
+			stack->head = new;
+			(stack->size)++;
+			cnt--;
+		}
 		i--;
 	}
 	lst_link(stack);
@@ -94,7 +101,7 @@ int	ft_atoi(char *str, t_list **stack)
 	while (str[i])
 	{
 		n = n * 10 + (str[i] - 48);
-		if (!((n*sign) <= INT_MAX && (n*sign) >= INT_MIN) || !(str[i] >= '0' && str[i] <= '9'))
+		if (check(n * sign) || !(str[i] >= '0' && str[i] <= '9'))
 			error();
 		i++;
 	}

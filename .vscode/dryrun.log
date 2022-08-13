@@ -1,6 +1,5 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory `/Users/minsukan/Desktop/42/push_swap'
+cc mandatory/command.c mandatory/indexing.c mandatory/make_stack.c mandatory/memory_cont.c mandatory/push_swap_main.c mandatory/quick_sort.c mandatory/split.c mandatory/a_to_b.c mandatory/exception_case.c mandatory/find_idx.c mandatory/greed.c mandatory/make_stack_util.c mandatory/stack_rotate.c mandatory/command2.c -o push_swap
 make: Leaving directory `/Users/minsukan/Desktop/42/push_swap'
  
-make: *** No targets specified and no makefile found.  Stop.
-

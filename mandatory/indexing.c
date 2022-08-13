@@ -6,7 +6,7 @@
 /*   By: minsukan <minsukan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 12:43:03 by minsukan          #+#    #+#             */
-/*   Updated: 2022/08/09 14:53:15 by minsukan         ###   ########.fr       */
+/*   Updated: 2022/08/13 23:54:30 by minsukan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,5 @@ t_list	***make_arr(t_stack *stack)
 		i++;
 	}
 	arr[i] = NULL;
-	return (arr);		
+	return (arr);
 }

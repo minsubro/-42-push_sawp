@@ -6,7 +6,7 @@
 /*   By: minsukan <minsukan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 13:33:03 by minsukan          #+#    #+#             */
-/*   Updated: 2022/08/09 14:53:30 by minsukan         ###   ########.fr       */
+/*   Updated: 2022/08/14 00:02:25 by minsukan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <limits.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h> ///
 
 typedef struct s_list
 {
@@ -40,14 +39,14 @@ typedef struct s_stack_lst
 
 typedef struct s_sort
 {
-	int left;
-	int right;
-	int lp;
-	int rp;
-	int l_area;
-	int now;
-	int r_area;
-}		t_sort;
+	int		left;
+	int		right;
+	int		lp;
+	int		rp;
+	int		l_area;
+	int		now;
+	int		r_area;
+}			t_sort;
 
 void	error(void);
 void	lst_clear(t_stack *stack);
@@ -66,11 +65,41 @@ void	indexing(t_stack *a_stack);
 void	lst_link(t_stack *stack);
 int		is_sort(t_stack *stack);
 void	s(t_stack *stack, char a);
-void	ss(t_stack_lst *stack_lst);
+void	ss(t_stack_lst stack_lst);
 void	p(t_stack *dst_stack, t_stack *src_stack, char a);
 void	r(t_stack *stack, char a);
-void	rr(t_stack_lst *stack);
+void	rr(t_stack_lst stack);
 void	rrab(t_stack *stack, char a);
-void	rrr(t_stack_lst *stack);
+void	rrr(t_stack_lst stack);
+char	**ft_split(char const *s, char c, int *acnt);
+
+int		exception_case(t_stack_lst stack);
+int		five_case(t_stack_lst stack);
+int		four_case(t_stack_lst stack);
+int		three_case(t_stack *stack);
+int		two_case(t_stack *stack);
+
+void	rotate_all(int *a, int *b, t_stack_lst stack);
+void	rotate_a(t_stack *stack, int *a);
+void	rotate_b(t_stack *stack, int *a);
+void	sort_set(t_stack *stack);
+
+int		find_a_pos(t_stack *stack, int num);
+int		ft_compare(int a, int b, int a_pos, int b_pos);
+void	get_min_rotate(t_stack_lst stack, int *a, int *b);
+void	greed(t_stack_lst stack);
+
+int		mid_idx(t_stack *stack, int num);
+int		stack_min(t_stack *stack);
+int		min_idx(t_stack *stack, int min);
+int		stack_max(t_stack *stack);
+int		max_idx(t_stack *stack, int max);
+
+void	a_to_b_all(t_stack_lst stack);
+void	find_pivot(int size, int *pivot1, int *pivot2);
+void	a_to_b(t_stack_lst stack);
+
+t_stack	*create_stack(void);
+int		check(long long num);
 
 #endif
