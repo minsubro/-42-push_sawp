@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker_main.c                                     :+:      :+:    :+:   */
+/*   checker_main_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: minsukan <minsukan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 00:16:30 by minsukan          #+#    #+#             */
-/*   Updated: 2022/08/14 02:43:47 by minsukan         ###   ########.fr       */
+/*   Updated: 2022/08/15 19:33:37 by minsukan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "checker_bonus.h"
 
 void	error(void)
 {
@@ -24,43 +24,40 @@ void	create_stack_lst(t_stack_lst *stack)
 	stack->b_stack = create_stack();
 }
 
-void	input_command(void)
+int	is_sort(t_stack *stack)
 {
-	char	*text;
-	char	buf;
-	int		fd;
+	t_list	*temp;
+	int		i;
 
-	text = "command.txt";
-	fd = open(text, O_WRONLY | O_CREAT | O_TRUNC, 0777);
-	if (fd < 0)
-		error();
-	while (read(0, &buf, 1) > 0)
-		write(fd, &buf, 1);
-	close(fd);
-}
-
-
-
-void command_exe(char *command, t_stack_lst stack)
-{
-	
-}
-
-#include <stdio.h>
-void check_start(t_stack_lst stack)
-{
-	char	*str;
-	int		fd;
-
-	fd = open("command.txt", O_RDONLY);
-	while (1)
+	temp = stack->head;
+	i = 0;
+	while (i < stack->size - 1)
 	{
-		str = get_next_line(fd);
-		if (!str)
-			break ;
-		command_exe(str, stack);
-		free(str);		
+		if (temp->n < temp->right->n)
+			temp = temp->right;
+		else
+			return (0);
+		i++;
 	}
+	return (1);
+}
+
+void	lst_clear(t_stack *stack)
+{
+	t_list	*temp;
+	t_list	*save;
+	int		i;
+
+	i = 0;
+	temp = stack->head;
+	while (i < stack->size)
+	{
+		save = temp->right;
+		free(temp);
+		temp = save;
+		i++;
+	}
+	free(stack);
 }
 
 int	main(int ac, char **av)
@@ -73,5 +70,11 @@ int	main(int ac, char **av)
 	make_stack(ac, av, stack.a_stack);
 	input_command();
 	check_start(stack);
-	
+	if (is_sort(stack.a_stack))
+		write(1, "OK\n", 3);
+	else
+		write(1, "KO\n", 3);
+	lst_clear(stack.a_stack);
+	lst_clear(stack.b_stack);
+	return (0);
 }

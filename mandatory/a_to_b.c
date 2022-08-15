@@ -6,7 +6,7 @@
 /*   By: minsukan <minsukan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 23:40:52 by minsukan          #+#    #+#             */
-/*   Updated: 2022/08/13 23:48:25 by minsukan         ###   ########.fr       */
+/*   Updated: 2022/08/15 20:06:48 by minsukan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ void	a_to_b_all(t_stack_lst stack)
 {
 	int		i;
 
-	while ((stack.a_stack->size) != 3)
+	i = 0;
+	while (i < (stack.a_stack->size) - 3)
 	{
 		p(stack.b_stack, stack.a_stack, 'b');
 		i++;

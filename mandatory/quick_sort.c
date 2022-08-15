@@ -6,7 +6,7 @@
 /*   By: minsukan <minsukan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 12:09:22 by minsukan          #+#    #+#             */
-/*   Updated: 2022/08/14 00:05:09 by minsukan         ###   ########.fr       */
+/*   Updated: 2022/08/15 20:10:25 by minsukan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,6 @@ void	arr_sort(t_list ***arr, int left, int right)
 		arr_sort(arr, left, (var_list->l_area) - 1);
 		arr_sort(arr, (var_list->l_area) + 1, (var_list->r_area) - 1);
 		arr_sort(arr, (var_list->r_area) + 1, right);
+		free(var_list);
 	}
 }

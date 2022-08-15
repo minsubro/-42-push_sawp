@@ -6,12 +6,11 @@
 /*   By: minsukan <minsukan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 19:05:43 by minsukan          #+#    #+#             */
-/*   Updated: 2022/08/14 02:38:35 by minsukan         ###   ########.fr       */
+/*   Updated: 2022/08/15 19:30:50 by minsukan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
-#include "../checker.h"
 
 int	lf_check(char *str)
 {
@@ -107,7 +106,7 @@ char	*make_str(t_list_g *lst, int *len)
 char	*get_next_line(int fd)
 {
 	static t_list_g	*head;
-	t_list_g			*fd_list;
+	t_list_g		*fd_list;
 	int				len;
 	char			*str;
 

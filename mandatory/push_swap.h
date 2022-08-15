@@ -6,7 +6,7 @@
 /*   By: minsukan <minsukan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 13:33:03 by minsukan          #+#    #+#             */
-/*   Updated: 2022/08/14 00:02:25 by minsukan         ###   ########.fr       */
+/*   Updated: 2022/08/15 20:17:29 by minsukan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,5 +101,6 @@ void	a_to_b(t_stack_lst stack);
 
 t_stack	*create_stack(void);
 int		check(long long num);
+void	str_clear(char **str);
 
 #endif

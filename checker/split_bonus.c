@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   split.c                                            :+:      :+:    :+:   */
+/*   split_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: minsukan <minsukan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 20:01:55 by minsukan          #+#    #+#             */
-/*   Updated: 2022/08/14 01:13:57 by minsukan         ###   ########.fr       */
+/*   Updated: 2022/08/15 19:37:26 by minsukan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "checker_bonus.h"
 
 static int	ft_cnt(char const *s, char c)
 {
@@ -51,20 +51,6 @@ static char	*ft_strcpy(char *save, char const *s, int start, int end)
 	return (save);
 }
 
-char	**ft_free(char **save, int cnt)
-{
-	int		i;
-
-	i = 0;
-	while (i < cnt)
-	{
-		free(save[i]);
-		i++;
-	}
-	free(save);
-	return (NULL);
-}
-
 static char	**ft_putstr(char **save, char const *s, char c, int cnt)
 {
 	int	start;
@@ -84,7 +70,7 @@ static char	**ft_putstr(char **save, char const *s, char c, int cnt)
 			end++;
 		save[idx] = (char *)malloc(end - start + 1);
 		if (!save[idx])
-			return (ft_free(save, idx));
+			error();
 		save[idx] = ft_strcpy(save[idx], s, start, end);
 		idx++;
 		start = end;
@@ -99,11 +85,11 @@ char	**ft_split(char const *s, char c, int *acnt)
 	int		cnt;
 
 	if (s == NULL)
-		return (NULL);
+		error();
 	cnt = ft_cnt(s, c);
 	*acnt = cnt;
 	str = (char **)malloc(sizeof(char *) * (cnt + 1));
 	if (str == NULL)
-		return (NULL);
+		error();
 	return (ft_putstr(str, s, c, cnt));
 }

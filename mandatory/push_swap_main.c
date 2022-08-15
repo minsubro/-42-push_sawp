@@ -6,7 +6,7 @@
 /*   By: minsukan <minsukan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 13:08:23 by minsukan          #+#    #+#             */
-/*   Updated: 2022/08/14 00:04:18 by minsukan         ###   ########.fr       */
+/*   Updated: 2022/08/15 20:17:16 by minsukan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ int	is_sort(t_stack *stack)
 			return (0);
 		i++;
 	}
-	lst_clear(stack);
 	return (1);
 }
 
@@ -59,7 +58,13 @@ int	main(int ac, char **av)
 	make_stack(ac, av, a_stack);
 	indexing(a_stack);
 	if (is_sort(stack.a_stack) == 1 || exception_case(stack) == 1)
+	{
+		lst_clear(a_stack);
+		lst_clear(b_stack);
 		return (0);
+	}
 	push_swap(stack);
+	lst_clear(a_stack);
+	lst_clear(b_stack);
 	return (0);
 }
