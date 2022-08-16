@@ -6,7 +6,7 @@
 /*   By: minsukan <minsukan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 00:16:30 by minsukan          #+#    #+#             */
-/*   Updated: 2022/08/15 19:33:37 by minsukan         ###   ########.fr       */
+/*   Updated: 2022/08/15 20:22:29 by minsukan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,24 +40,6 @@ int	is_sort(t_stack *stack)
 		i++;
 	}
 	return (1);
-}
-
-void	lst_clear(t_stack *stack)
-{
-	t_list	*temp;
-	t_list	*save;
-	int		i;
-
-	i = 0;
-	temp = stack->head;
-	while (i < stack->size)
-	{
-		save = temp->right;
-		free(temp);
-		temp = save;
-		i++;
-	}
-	free(stack);
 }
 
 int	main(int ac, char **av)

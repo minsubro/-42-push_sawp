@@ -1,5 +1,13 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/minsukan/Desktop/42/push_swap'
-cc mandatory/command.c mandatory/indexing.c mandatory/make_stack.c mandatory/memory_cont.c mandatory/push_swap_main.c mandatory/quick_sort.c mandatory/split.c mandatory/a_to_b.c mandatory/exception_case.c mandatory/find_idx.c mandatory/greed.c mandatory/make_stack_util.c mandatory/stack_rotate.c mandatory/command2.c -o push_swap
+cc -Wall -Wextra -Werror -c mandatory/a_to_b.c -o mandatory/a_to_b.o
+cc -Wall -Wextra -Werror -c mandatory/exception_case.c -o mandatory/exception_case.o
+cc -Wall -Wextra -Werror -c mandatory/find_idx.c -o mandatory/find_idx.o
+cc -Wall -Wextra -Werror -c mandatory/greed.c -o mandatory/greed.o
+cc -Wall -Wextra -Werror -c mandatory/make_stack_util.c -o mandatory/make_stack_util.o
+ 
+cc -Wall -Wextra -Werror -c mandatory/stack_rotate.c -o mandatory/stack_rotate.o
+cc -Wall -Wextra -Werror -c mandatory/command2.c -o mandatory/command2.o
+cc mandatory/command.o mandatory/indexing.o mandatory/make_stack.o mandatory/memory_cont.o mandatory/push_swap_main.o mandatory/quick_sort.o mandatory/split.o mandatory/a_to_b.o mandatory/exception_case.o mandatory/find_idx.o mandatory/greed.o mandatory/make_stack_util.o mandatory/stack_rotate.o mandatory/command2.o -o push_swap
 make: Leaving directory `/Users/minsukan/Desktop/42/push_swap'
  

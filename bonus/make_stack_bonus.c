@@ -6,7 +6,7 @@
 /*   By: minsukan <minsukan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 12:47:33 by minsukan          #+#    #+#             */
-/*   Updated: 2022/08/15 19:23:39 by minsukan         ###   ########.fr       */
+/*   Updated: 2022/08/15 20:20:54 by minsukan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ void	make_stack(int ac, char **av, t_stack *stack)
 			(stack->size)++;
 			cnt--;
 		}
+		str_clear(str);
 		i--;
 	}
 	lst_link(stack);

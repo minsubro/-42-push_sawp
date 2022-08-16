@@ -6,7 +6,7 @@
 /*   By: minsukan <minsukan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 23:31:13 by minsukan          #+#    #+#             */
-/*   Updated: 2022/08/13 23:53:53 by minsukan         ###   ########.fr       */
+/*   Updated: 2022/08/16 10:34:07 by minsukan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int	find_a_pos(t_stack *stack, int num)
 {
 	int		idx;
-	t_list	*temp;
 
 	if (stack->size < 2)
 		return (0);

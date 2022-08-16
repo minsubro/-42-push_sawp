@@ -6,7 +6,7 @@
 /*   By: minsukan <minsukan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 23:28:18 by minsukan          #+#    #+#             */
-/*   Updated: 2022/08/13 23:51:59 by minsukan         ###   ########.fr       */
+/*   Updated: 2022/08/16 10:33:46 by minsukan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,6 @@ int	four_case(t_stack_lst stack)
 
 int	five_case(t_stack_lst stack)
 {
-	t_list	*temp;
-
 	while (stack.a_stack->size != 3)
 	{
 		if (stack.a_stack->head->n == 0 || stack.a_stack->head->n == 1)

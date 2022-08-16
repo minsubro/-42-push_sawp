@@ -15,15 +15,25 @@ SRCS = mandatory/command.c			\
 	   mandatory/stack_rotate.c		\
 	   mandatory/command2.c
 
+BONUS_SRC = bonus/command_bonus.c			\
+			bonus/command2_bonus.c			\
+			bonus/checker_main_bonus.c		\
+			bonus/command_input_bonus.c		\
+			bonus/make_stack_bonus.c		\
+			bonus/make_stack_util_bonus.c	\
+			bonus/memory_bonus.c			\
+			bonus/split_bonus.c				\
+
 NAME = push_swap
 OBJS = $(SRCS:.c=.o)
-RM = rm -rf
+BONUS_OBJS = $(BONUS_SRC:.c=.o)
+RM = rm -f
 
 
 all : $(NAME)
 
-$(NAME) :
-	$(CC) $(SRCS) -o $(NAME)
+$(NAME) : $(OBJS) 
+	$(CC) $^ -o $(NAME)
 
 %.o : %.c
 	$(CC) $(CFLAGS) -c $^ -o $@

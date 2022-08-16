@@ -6,7 +6,7 @@
 /*   By: minsukan <minsukan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 23:40:52 by minsukan          #+#    #+#             */
-/*   Updated: 2022/08/15 20:06:48 by minsukan         ###   ########.fr       */
+/*   Updated: 2022/08/16 10:33:21 by minsukan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,9 @@
 
 void	a_to_b_all(t_stack_lst stack)
 {
-	int		i;
-
-	i = 0;
-	while (i < (stack.a_stack->size) - 3)
+	while (3 < (stack.a_stack->size))
 	{
 		p(stack.b_stack, stack.a_stack, 'b');
-		i++;
 	}
 	if (stack.a_stack->size == 2)
 		two_case(stack.a_stack);
@@ -38,7 +34,6 @@ void	a_to_b(t_stack_lst stack)
 {
 	int		pivot1;
 	int		pivot2;
-	t_list	*temp;
 	int		size;
 
 	size = stack.a_stack->size;
