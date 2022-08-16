@@ -7,7 +7,7 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "/Users/minsukan/Desktop/42/push_swap/*.c",
+                "${fileDirname}//*.c",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],
@@ -17,7 +17,10 @@
             "problemMatcher": [
                 "$gcc"
             ],
-            "group": "build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
             "detail": "디버거에서 생성된 작업입니다."
         }
     ],

@@ -6,7 +6,7 @@
 /*   By: minsukan <minsukan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 13:08:23 by minsukan          #+#    #+#             */
-/*   Updated: 2022/08/15 20:17:16 by minsukan         ###   ########.fr       */
+/*   Updated: 2022/08/16 11:43:59 by minsukan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	error(void)
 {
 	write(2, "Error\n", 6);
-	exit(0);
+	exit(1);
 }
 
 void	push_swap(t_stack_lst stack)

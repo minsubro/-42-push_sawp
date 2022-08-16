@@ -6,11 +6,11 @@
 /*   By: minsukan <minsukan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 19:06:26 by minsukan          #+#    #+#             */
-/*   Updated: 2022/08/14 02:08:52 by minsukan         ###   ########.fr       */
+/*   Updated: 2022/08/16 10:46:43 by minsukan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "checker_bonus.h"
 
 t_list_g	*lstnew(int fd)
 {

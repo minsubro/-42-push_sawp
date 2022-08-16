@@ -6,11 +6,11 @@
 /*   By: minsukan <minsukan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 19:05:43 by minsukan          #+#    #+#             */
-/*   Updated: 2022/08/15 19:30:50 by minsukan         ###   ########.fr       */
+/*   Updated: 2022/08/16 10:46:33 by minsukan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "checker_bonus.h"
 
 int	lf_check(char *str)
 {

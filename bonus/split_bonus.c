@@ -6,7 +6,7 @@
 /*   By: minsukan <minsukan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 20:01:55 by minsukan          #+#    #+#             */
-/*   Updated: 2022/08/15 19:37:26 by minsukan         ###   ########.fr       */
+/*   Updated: 2022/08/16 11:18:10 by minsukan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,8 @@ char	**ft_split(char const *s, char c, int *acnt)
 	if (s == NULL)
 		error();
 	cnt = ft_cnt(s, c);
+	if (cnt == 0)
+		error();
 	*acnt = cnt;
 	str = (char **)malloc(sizeof(char *) * (cnt + 1));
 	if (str == NULL)

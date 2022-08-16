@@ -6,7 +6,7 @@
 /*   By: minsukan <minsukan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 00:16:45 by minsukan          #+#    #+#             */
-/*   Updated: 2022/08/15 20:19:28 by minsukan         ###   ########.fr       */
+/*   Updated: 2022/08/16 10:46:11 by minsukan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 # include <fcntl.h>
 # include <limits.h>
-# include "gnl/get_next_line_bonus.h"
+# include "get_next_line_bonus.h"
 
 typedef struct s_list
 {
@@ -40,7 +40,7 @@ typedef struct s_stack_lst
 }					t_stack_lst;
 
 char	**ft_split(char const *s, char c, int *acnt);
-void	input_commannd(t_stack_lst stack);
+void	input_command(void);
 void	create_stack_lst(t_stack_lst *stack);
 void	error(void);
 t_stack	*create_stack(void);
@@ -60,5 +60,8 @@ void	ss(t_stack_lst stack_lst);
 void	p(t_stack *dst_stack, t_stack *src_stack);
 void	command_exe(char *command, t_stack_lst stack);
 void	str_clear(char **str);
+void	lst_clear(t_stack *stack);
+void	check_start(t_stack_lst stack);
+int		ft_strcmp(char *s1, char *s2);
 
 #endif

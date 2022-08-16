@@ -6,7 +6,7 @@
 /*   By: minsukan <minsukan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 19:26:13 by minsukan          #+#    #+#             */
-/*   Updated: 2022/08/15 19:33:30 by minsukan         ###   ########.fr       */
+/*   Updated: 2022/08/16 17:06:30 by minsukan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,8 @@ void	command_exe(char *command, t_stack_lst stack)
 		rrab(stack.b_stack);
 	if (ft_strcmp("rrr", command))
 		rrr(stack);
+	else
+		error();
 }
 
 int	ft_strcmp(char *s1, char *s2)

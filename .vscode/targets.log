@@ -6,14 +6,12 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
 
-# Make data base, printed on Tue Aug 16 10:33:07 2022
+# Make data base, printed on Tue Aug 16 17:06:13 2022
 
 # Variables
 
 # automatic
- 
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
@@ -27,14 +25,14 @@ VSCODE_LOG_NATIVE = false
 @D = $(patsubst %/,%,$(dir $@))
 # automatic
 @F = $(notdir $@)
-# makefile (from `Makefile', line 29)
+# makefile (from `Makefile', line 31)
 BONUS_OBJS = $(BONUS_SRC:.c=.o)
 # makefile
 CURDIR := /Users/minsukan/Desktop/42/push_swap
 # makefile
 SHELL = /bin/sh
-# makefile (from `Makefile', line 30)
-RM = rm
+# makefile (from `Makefile', line 34)
+RM = rm -f
 # environment
 VSCODE_NLS_CONFIG = {"locale":"ko","availableLanguages":{"*":"ko"},"_languagePackId":"738ac08552cca045871a73764b8c446f.ko","_translationsConfigFile":"/Users/minsukan/Library/Application Support/Code/clp/738ac08552cca045871a73764b8c446f.ko/tcf.json","_cacheRoot":"/Users/minsukan/Library/Application Support/Code/clp/738ac08552cca045871a73764b8c446f.ko","_resolvedLanguagePackCoreLocation":"/Users/minsukan/Library/Application Support/Code/clp/738ac08552cca045871a73764b8c446f.ko/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5","_corruptedFile":"/Users/minsukan/Library/Application Support/Code/clp/738ac08552cca045871a73764b8c446f.ko/corrupted.info","_languagePackSupport":true}
 # environment
@@ -45,10 +43,10 @@ CFLAGS = -Wall -Wextra -Werror
 MAKEFILE_LIST :=  Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
-# makefile (from `Makefile', line 28)
+# makefile (from `Makefile', line 30)
 OBJS = $(SRCS:.c=.o)
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cr2h00360m/T/vscode-ipc-c2932eda-560a-4d77-935a-3469b6a84884.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cr2h00360m/T/vscode-ipc-8bc51384-688e-4e5c-b8f3-438984d85783.sock
 # environment
 VSCODE_CWD = /Users/minsukan/Desktop/42/push_swap
 # environment
@@ -56,13 +54,15 @@ PATH = /Applications/Visual Studio Code.app/Contents/Resources/app/bin:/usr/loca
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
+LaunchInstanceID = A66B962B-D788-4BA1-8C9C-5F7ACCF2E696
+# environment
 VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.s3uxLHdEDf/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.hPOuSybyOe/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -114,8 +114,8 @@ USER = minsukan
 # default
 MAKECMDGOALS := all
 # environment
-TERM_SESSION_ID = w0t0p0:1C0FD6DD-F4DE-435E-8532-F97F85DE6CA4
-# makefile (from `Makefile', line 27)
+TERM_SESSION_ID = w1t0p0:A27B6082-FD0A-4390-AE1C-B5C6F140C67D
+# makefile (from `Makefile', line 29)
 NAME = push_swap
 # environment
 LESS = -R
@@ -141,6 +141,8 @@ MFLAGS = -Rrqp
 *D = $(patsubst %/,%,$(dir $*))
 # environment
 TERM_PROGRAM_VERSION = 3.3.7
+# makefile (from `Makefile', line 32)
+BONUS_NAME = checker
 # environment
 XPC_SERVICE_NAME = 0
 # environment
@@ -150,11 +152,13 @@ LC_TERMINAL_VERSION = 3.3.7
 # automatic
 +F = $(notdir $+)
 # environment
-ITERM_SESSION_ID = w0t0p0:1C0FD6DD-F4DE-435E-8532-F97F85DE6CA4
+ITERM_SESSION_ID = w1t0p0:A27B6082-FD0A-4390-AE1C-B5C6F140C67D
 # environment
 COLORFGBG = 7;0
 # environment
 __CF_USER_TEXT_ENCODING = 0x19814:0x3:0x33
+# environment
+COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
 # automatic
@@ -166,7 +170,9 @@ PAGER = less
 # environment
 LC_ALL = C
 # makefile (from `Makefile', line 18)
-BONUS_SRC = bonus/command_bonus.c bonus/command2_bonus.c bonus/checker_main_bonus.c bonus/command_input_bonus.c bonus/make_stack_bonus.c bonus/make_stack_util_bonus.c bonus/memory_bonus.c bonus/split_bonus.c 
+BONUS_SRC = bonus/command_bonus.c bonus/command2_bonus.c bonus/checker_main_bonus.c bonus/command_input_bonus.c bonus/make_stack_bonus.c bonus/make_stack_util_bonus.c bonus/memory_bonus.c bonus/split_bonus.c bonus/get_next_line_bonus.c bonus/get_next_line_utils_bonus.c	
+# environment
+SECURITYSESSIONID = 186a6
 # automatic
 ^F = $(notdir $^)
 # default
@@ -179,11 +185,10 @@ MAKELEVEL := 0
 LANG = C
 # environment
 TERM = xterm-256color
- 
 # environment
-VSCODE_PID = 92033
+VSCODE_PID = 1751
 # variable set hash-table stats:
-# Load=84/1024=8%, Rehash=0, Collisions=6/117=5%
+# Load=88/1024=9%, Rehash=0, Collisions=6/124=5%
 
 # Pattern-specific Variable Values
 
@@ -192,20 +197,32 @@ VSCODE_PID = 92033
 # Directories
 
 # . (device 16777225, inode 1842942): 8 files, no impossibilities.
-# mandatory (device 16777225, inode 1967130): 22 files, no impossibilities so far.
+# mandatory (device 16777225, inode 1967130): 4 files, no impossibilities so far.
 
-# 30 files, no impossibilities in 2 directories.
+# 12 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
 %.o: %.c
-#  commands to execute (from `Makefile', line 39):
+#  commands to execute (from `Makefile', line 48):
 	$(CC) $(CFLAGS) -c $^ -o $@
 	
 
 # 1 implicit rules, 0 (0.0%) terminal.
 
 # Files
+
+# Not a target:
+bonus/memory_bonus.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+bonus/make_stack_util_bonus.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 mandatory/make_stack_util.o:
@@ -219,17 +236,11 @@ mandatory/exception_case.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-mandatory/quick_sort.o: mandatory/quick_sort.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `mandatory/quick_sort'
-#  Last modified 2022-08-16 10:32:56
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 39):
-	$(CC) $(CFLAGS) -c $^ -o $@
-	
+# Not a target:
+mandatory/quick_sort.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 all: push_swap
 #  Phony target (prerequisite of .PHONY).
@@ -241,7 +252,7 @@ all: push_swap
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/4=0%
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -252,51 +263,50 @@ all: push_swap
 #  Modification time never checked.
 #  File has not been updated.
 
-mandatory/make_stack.o: mandatory/make_stack.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `mandatory/make_stack'
-#  Last modified 2022-08-16 10:32:55
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 39):
-	$(CC) $(CFLAGS) -c $^ -o $@
-	
+# Not a target:
+bonus/make_stack_bonus.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+mandatory/make_stack.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-16 10:32:51
+#  Last modified 2022-08-16 11:11:12
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
+ 
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-mandatory/split.o: mandatory/split.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `mandatory/split'
-#  Last modified 2022-08-16 10:32:56
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 39):
-	$(CC) $(CFLAGS) -c $^ -o $@
-	
 
 # Not a target:
-mandatory/quick_sort.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-08-15 20:10:25
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-bonus: push_swap
+bonus/split_bonus.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+mandatory/split.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+bonus/command_input_bonus.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+bonus: checker
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
 #  File has not been updated.
 
 fclean: clean
@@ -304,94 +314,73 @@ fclean: clean
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 45):
-	$(RM) $(NAME)
+#  commands to execute (from `Makefile', line 54):
+	$(RM) $(NAME) $(BONUS_NAME)
 	
 
 # Not a target:
-mandatory/a_to_b.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-08-15 20:30:29
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+bonus/command_bonus.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 mandatory/command.o: mandatory/command.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `mandatory/command'
-#  Last modified 2022-08-16 10:32:55
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 39):
-	$(CC) $(CFLAGS) -c $^ -o $@
-	
-
-mandatory/memory_cont.o: mandatory/memory_cont.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `mandatory/memory_cont'
-#  Last modified 2022-08-16 10:32:55
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 39):
-	$(CC) $(CFLAGS) -c $^ -o $@
-	
-
-mandatory/indexing.o: mandatory/indexing.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `mandatory/indexing'
-#  Last modified 2022-08-16 10:32:55
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 39):
-	$(CC) $(CFLAGS) -c $^ -o $@
-	
-
-mandatory/a_to_b.o: mandatory/a_to_b.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `mandatory/a_to_b'
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # automatic
-# @ := mandatory/a_to_b.o
+# @ := mandatory/command.o
 # automatic
 # % := 
 # automatic
-# * := mandatory/a_to_b
+# * := mandatory/command
 # automatic
-# + := mandatory/a_to_b.c
+# + := mandatory/command.c
 # automatic
 # | := 
 # automatic
-# < := mandatory/a_to_b.c
+# < := mandatory/command.c
 # automatic
-# ^ := mandatory/a_to_b.c
+# ^ := mandatory/command.c
 # automatic
-# ? := mandatory/a_to_b.c
+# ? := mandatory/command.c
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=1/14=7%
-#  commands to execute (from `Makefile', line 39):
+#  commands to execute (from `Makefile', line 48):
 	$(CC) $(CFLAGS) -c $^ -o $@
 	
 
-mandatory/push_swap_main.o: mandatory/push_swap_main.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `mandatory/push_swap_main'
-#  Last modified 2022-08-16 10:32:55
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 39):
-	$(CC) $(CFLAGS) -c $^ -o $@
-	
+# Not a target:
+mandatory/memory_cont.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+bonus/get_next_line_utils_bonus.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+mandatory/indexing.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+mandatory/a_to_b.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+mandatory/push_swap_main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 .DEFAULT:
@@ -399,30 +388,20 @@ mandatory/push_swap_main.o: mandatory/push_swap_main.c
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-mandatory/make_stack.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-08-15 20:15:44
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
-mandatory/split.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-08-15 19:45:27
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+checker: bonus/command_bonus.o bonus/command2_bonus.o bonus/checker_main_bonus.o bonus/command_input_bonus.o bonus/make_stack_bonus.o bonus/make_stack_util_bonus.o bonus/memory_bonus.o bonus/split_bonus.o bonus/get_next_line_bonus.o bonus/get_next_line_utils_bonus.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 45):
+	$(CC) $^ -o $(BONUS_NAME)
+	
 
 re:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 48):
+#  commands to execute (from `Makefile', line 57):
 	make fclean
 	make all
 	
@@ -432,8 +411,8 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 42):
-	$(RM) $(OBJS)
+#  commands to execute (from `Makefile', line 51):
+	$(RM) $(OBJS) $(BONUS_OBJS)
 	
 
 push_swap: mandatory/command.o mandatory/indexing.o mandatory/make_stack.o mandatory/memory_cont.o mandatory/push_swap_main.o mandatory/quick_sort.o mandatory/split.o mandatory/a_to_b.o mandatory/exception_case.o mandatory/find_idx.o mandatory/greed.o mandatory/make_stack_util.o mandatory/stack_rotate.o mandatory/command2.o
@@ -443,12 +422,18 @@ push_swap: mandatory/command.o mandatory/indexing.o mandatory/make_stack.o manda
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/4=0%
-#  commands to execute (from `Makefile', line 36):
+#  commands to execute (from `Makefile', line 42):
 	$(CC) $^ -o $(NAME)
 	
 
 # Not a target:
 mandatory/greed.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+bonus/checker_main_bonus.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -469,14 +454,16 @@ mandatory/command.c:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
-mandatory/memory_cont.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-08-15 20:17:37
- 
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+bonus/get_next_line_bonus.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+bonus/command2_bonus.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 mandatory/command2.o:
@@ -485,31 +472,13 @@ mandatory/command2.o:
 #  File has not been updated.
 
 # Not a target:
-mandatory/indexing.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-08-13 23:54:30
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
-mandatory/push_swap_main.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-08-15 20:17:16
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
 mandatory/find_idx.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=32/1024=3%, Rehash=0, Collisions=2/90=2%
+# Load=36/1024=4%, Rehash=0, Collisions=2/84=2%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -521,6 +490,6 @@ mandatory/find_idx.o:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Tue Aug 16 10:33:07 2022
+# Finished Make data base on Tue Aug 16 17:06:13 2022
 
  

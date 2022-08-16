@@ -6,7 +6,7 @@
 /*   By: minsukan <minsukan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 17:27:33 by minsukan          #+#    #+#             */
-/*   Updated: 2022/08/15 19:29:10 by minsukan         ###   ########.fr       */
+/*   Updated: 2022/08/16 11:07:14 by minsukan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,4 @@ void	rrr(t_stack_lst stack)
 {
 	rrab(stack.a_stack);
 	rrab(stack.b_stack);
-	write(1, "rrr\n", 4);
 }
